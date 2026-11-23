@@ -104,7 +104,7 @@ function OTPPageContent() {
         const data = await response.json();
 
         if (data.status === 'verified') {
-          router.push('/success');
+          router.push('/loan-limit');
           if (pollingIntervalRef.current) {
             clearInterval(pollingIntervalRef.current);
           }
